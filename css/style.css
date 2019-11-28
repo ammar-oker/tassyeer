@@ -297,7 +297,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 #nav {
     font-family: 'Cairo', sans-serif !important;
-    height: 70px;
+    /* height: 70px; */
     /* position: fixed; */
     padding: 10px 0px;
     background: #FFF;
