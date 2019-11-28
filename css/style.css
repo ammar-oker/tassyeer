@@ -109,11 +109,15 @@ ul, ol {
 }
 
 .sm-padding {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 45px;
+    padding-bottom: 45px;
 }
 
 /* -- color section -- */
+
+.white {
+    color: #FFF;
+}
 
 .yellow {
     color: #eeb407;
@@ -266,6 +270,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .navbar-brand {
     padding: 0;
+    float: left !important;
 }
 
 .navbar-brand .logo, .navbar-brand .logo-alt {
@@ -375,7 +380,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         padding: 0px 0px;
     }
     #nav.nav-transparent {
-        background: #FFF;
+        background: 0;
     }
     .main-nav {
         position: fixed;
@@ -450,7 +455,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .nav-collapse span, .nav-collapse span:before, .nav-collapse span:after {
     height: 4px;
-    background: #10161A;
+    background: #fff;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
@@ -481,6 +486,39 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     -webkit-transform: translateY(-4px) rotate(135deg);
     -ms-transform: translateY(-4px) rotate(135deg);
     transform: translateY(-4px) rotate(135deg);
+}
+
+
+/*------------------------------------*\
+	Download Butons
+\*------------------------------------*/
+
+.btn-store {
+    /* color: #fff; */
+    min-width: 254px;
+    margin: 10px;
+    ;
+    padding: 12px 20px !important;
+    border-color: #eeb407 !important;
+}
+
+.btn-store:focus,
+.btn-store:hover {
+    color: #ffffff !important;
+    background-color: #eeb407;
+    border-color: #fff !important;
+}
+
+.btn-store .btn-label,
+.btn-store .btn-caption {
+    margin-top: 9px;
+    display: block;
+    text-align: left;
+    line-height: 1;
+}
+
+.btn-store .btn-caption {
+    font-size: 24px;
 }
 
 /*------------------------------------*\
@@ -842,6 +880,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .widget-post li i {
     color: #6195FF;
     margin-right: 5px;
+}
+
+.post-glide {
+    cursor: grab;
 }
 
 /*------------------------------------*\
