@@ -14,7 +14,7 @@ html, body {
 	General
 \*------------------------------------*/
 
-header {
+#header {
     height: 100vh;
 }
 /* -- typography -- */
@@ -155,6 +155,9 @@ ul, ol {
     background-color: #1C1D21;
 }
 
+.bg-mix {
+    background: linear-gradient(-200deg, #17a3b8, #0573c7) !important;
+}
 
 /* --  background image section  -- */
 
@@ -165,7 +168,7 @@ ul, ol {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-position: center;
+    background-position: right;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -244,7 +247,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .main-btn {
-    background: #6195FF;
+    background: #eeb407;
     color: #FFF;
 }
 
@@ -262,8 +265,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .main-btn:hover, .white-btn:hover, .outline-btn:hover {
     opacity: 0.8;
 }
-
-
+  /* --- mobile heder  --- */
+@media only screen and (max-width: 991px) {
+    .home-text {
+        text-align: center;
+    }
+}
 /*------------------------------------*\
 	Logo
 \*------------------------------------*/
@@ -323,7 +330,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     right: 0;
     padding: 0px 0px;
     color: #FFF !important;
-    background: linear-gradient(-396deg, #17a3b8, #0573c7) !important;
+    background: linear-gradient(-200deg, #17a3b8, #0573c7) !important;
     /* background-color: #17a3b8 !important; */
     border-bottom: 1px solid #17a3b8;
 }
@@ -488,6 +495,55 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transform: translateY(-4px) rotate(135deg);
 }
 
+/*------------------------------------*\
+	Header
+\*------------------------------------*/
+
+header {
+    position: relative;
+}
+
+#home {
+    height: 100vh;
+}
+
+#home .home-wrapper {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.home-content h1 {
+  text-transform: uppercase;
+}
+.home-content button {
+  margin-top: 20px;
+}
+
+.header-wrapper h2 {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.header-wrapper .breadcrumb {
+    float: left;
+    background: transparent;
+    margin-bottom: 0px;
+}
+
+.header-wrapper .breadcrumb .breadcrumb-item.active {
+    color: #868F9B;
+}
+
+.breadcrumb>li+li:before {
+    color: #868F9B;
+}
+
 
 /*------------------------------------*\
 	Download Butons
@@ -498,7 +554,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     min-width: 254px;
     margin: 10px;
     ;
-    padding: 12px 20px !important;
+    padding: 12px 30px ;
     border-color: #eeb407 !important;
 }
 
@@ -511,15 +567,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .btn-store .btn-label,
 .btn-store .btn-caption {
-    margin-top: 9px;
     display: block;
-    text-align: left;
-    line-height: 1;
+    line-height: 2;
+     text-align: right;
 }
 
 .btn-store .btn-caption {
     font-size: 24px;
 }
+
 
 /*------------------------------------*\
 	Footer
@@ -564,7 +620,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .footer-copyright p {
     text-align: center;
     font-size: 14px;
-    text-transform: uppercase;
     margin: 0;
 }
 
@@ -885,6 +940,40 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .post-glide {
     cursor: grab;
 }
+
+/*------------------------------------*\
+	Contact
+\*------------------------------------*/
+
+.contact {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.contact i {
+    font-size: 36px;
+    color: #eeb407;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-form .input {
+    margin-bottom: 20px;
+}
+
+
+.contact-form .input:nth-child(1), .contact-form .input:nth-child(2) {
+    width: calc(50% - 10px);
+}
+
+.contact-form .input:nth-child(2) {
+    margin-left: 15px;
+}
+
 
 /*------------------------------------*\
 	Back to top
