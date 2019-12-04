@@ -61,6 +61,7 @@ function myFunction(x) {
   if (x.matches) { // If media query matches
     document.querySelector('#phone3').classList.add("hide");
     document.querySelector('#phone2').classList.add("hide");
+    document.querySelector('.toggle-phones-btns').classList.remove('hide')
 
   }
 }
