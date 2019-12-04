@@ -31,5 +31,40 @@ var glide = new Glide('.glide', {
 });
 glide.mount();
 
+document.querySelector('#phoneBtn1').addEventListener('click', function() {
+  document.querySelector('#phoneBtn1').classList.add("active");
+  document.querySelector('#phoneBtn2').classList.remove("active");
+  document.querySelector('#phoneBtn3').classList.remove("active");
+  document.querySelector('#phone1').classList.remove("hide");
+  document.querySelector('#phone2').classList.add("hide");
+  document.querySelector('#phone3').classList.add("hide");
+})
+document.querySelector('#phoneBtn2').addEventListener('click', function() {
+  document.querySelector('#phoneBtn2').classList.add("active");
+  document.querySelector('#phoneBtn1').classList.remove("active");
+  document.querySelector('#phoneBtn3').classList.remove("active");
+  document.querySelector('#phone2').classList.remove("hide");
+  document.querySelector('#phone1').classList.add("hide");
+  document.querySelector('#phone3').classList.add("hide");
 
+})
+document.querySelector('#phoneBtn3').addEventListener('click', function() {
+  document.querySelector('#phoneBtn3').classList.add("active");
+  document.querySelector('#phoneBtn1').classList.remove("active");
+  document.querySelector('#phoneBtn2').classList.remove("active");
+  document.querySelector('#phone3').classList.remove("hide");
+  document.querySelector('#phone1').classList.add("hide");
+  document.querySelector('#phone2').classList.add("hide");
+})
 
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelector('#phone3').classList.add("hide");
+    document.querySelector('#phone2').classList.add("hide");
+
+  }
+}
+
+var x = window.matchMedia("(max-width: 991px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes

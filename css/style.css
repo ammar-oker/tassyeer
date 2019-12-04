@@ -1,21 +1,22 @@
-html, body {
+html,
+body {
     box-sizing: border-box;
     font-family: 'Montserrat';
-
-
-
+    margin: 0 !important;
+    padding: 0 !important;
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
     color: #868F9B;
 }
 
+
 /*------------------------------------*\
 	General
 \*------------------------------------*/
 
-#header {
-    height: 100vh;
+.iphone-x {
+    transform: scale(.6); margin-top: -165px;
 }
 /* -- typography -- */
 
@@ -26,7 +27,12 @@ body {
     color: #868F9B;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Cairo', sans-serif !important;
     font-weight: 700;
     margin-top: 0px;
@@ -61,7 +67,8 @@ a {
     transition: 0.2s opacity;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none;
     outline: none;
     opacity: 0.8;
@@ -86,18 +93,21 @@ a:hover, a:focus {
     color: #FFF;
 }
 
-ul, ol {
+ul,
+ol {
     margin: 0;
     padding: 0;
     list-style: none
 }
 
+
 /* -- section  -- */
-.container-border{
+
+.container-border {
     border: 1px solid #ccc;
-    border-radius: 15px;  
+    border-radius: 15px;
     padding: 15px;
-    }
+}
 
 .section {
     position: relative;
@@ -112,6 +122,12 @@ ul, ol {
     padding-top: 45px;
     padding-bottom: 45px;
 }
+
+.my-5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 
 /* -- color section -- */
 
@@ -130,6 +146,7 @@ ul, ol {
 .dark-blue {
     color: #0573c7;
 }
+
 
 /* --  background section  -- */
 
@@ -158,6 +175,7 @@ ul, ol {
 .bg-mix {
     background: linear-gradient(-200deg, #17a3b8, #0573c7) !important;
 }
+
 
 /* --  background image section  -- */
 
@@ -196,11 +214,11 @@ ul, ol {
 }
 
 .title:after {
-    content:"";
-  	display:block;
-  	height:4px;
-  	width:40px;
-  	background-color: #eeb407;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: #eeb407;
     margin-top: 20px;
 }
 
@@ -208,13 +226,21 @@ ul, ol {
     margin: 20px auto 0px;
 }
 
+
 /* --  Input  -- */
 
-input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+input[type="tel"],
+textarea {
     height: 40px;
     width: 100%;
     border: none;
-	  background: #F4F4F4;
+    background: #F4F4F4;
     border-bottom: 2px solid #EEE;
     color: #354052;
     padding: 0px 10px;
@@ -229,14 +255,24 @@ textarea {
     resize: vertical;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus, input[type="tel"]:focus, textarea:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
     border-color: #eeb407;
     opacity: 1;
 }
 
+
 /* --  Buttons  -- */
 
-.main-btn, .white-btn, .outline-btn {
+.main-btn,
+.white-btn,
+.outline-btn {
     display: inline-block;
     padding: 10px 35px;
     margin: 3px;
@@ -262,35 +298,49 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     border-color: #6195FF;
 }
 
-.main-btn:hover, .white-btn:hover, .outline-btn:hover {
+.main-btn:hover,
+.white-btn:hover,
+.outline-btn:hover {
     opacity: 0.8;
 }
-  /* --- mobile heder  --- */
+
+.home-text,
+.home-text h1 {
+    color: #FFF;
+}
+
+
+
+/* --- mobile heder  --- */
+
 @media only screen and (max-width: 991px) {
     .home-text {
         text-align: center;
     }
 }
+
+
 /*------------------------------------*\
 	Logo
 \*------------------------------------*/
 
 .navbar-brand {
     padding: 0;
-    float: left !important;
+    float: right !important;
 }
 
-.navbar-brand .logo, .navbar-brand .logo-alt {
+.navbar-brand .logo,
+.navbar-brand .logo-alt {
     max-height: 50px;
     display: block;
 }
 
 #nav:not(.nav-transparent):not(.fixed-nav) .navbar-brand .logo-alt {
-	display: none;
+    display: none;
 }
 
 #nav.nav-transparent:not(.fixed-nav) .navbar-brand .logo {
-	display: none;
+    display: none;
 }
 
 #nav.fixed-nav .navbar-brand .logo-alt {
@@ -306,16 +356,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     }
 }
 
-
 #nav {
     font-family: 'Cairo', sans-serif !important;
-    /* height: 70px; */
-    /* position: fixed; */
     padding: 10px 0px;
     background: #FFF;
     -webkit-transition: 0.2s padding;
     transition: 0.2s padding;
     z-index: 999;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #nav.navbar {
@@ -342,6 +391,14 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 /* -- default nav -- */
 
+.nav-btn a {
+    padding-top: 10px !important;
+    color: #fff;
+    width: 80px;
+    height: 40px;
+    margin-top: 7px;
+}
+
 @media only screen and (min-width: 768px) {
     .main-nav li {
         padding: 0px 15px;
@@ -358,7 +415,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
         color: #fff;
     }
-    .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+    .main-nav>li>a:hover,
+    .main-nav>li>a:focus,
+    .main-nav>li.active>a {
         background: transparent;
         color: #eeb407;
     }
@@ -371,7 +430,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         -webkit-transition: 0.2s width;
         transition: 0.2s width;
     }
-    .main-nav>li>a:hover:after, .main-nav>li.active>a:after {
+    .main-nav>li>a:hover:after,
+    .main-nav>li.active>a:after {
         width: 100%;
     }
     .nav-collapse {
@@ -382,13 +442,14 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .sidebar-only {
     display: none;
 }
+
+
 /* -- mobile nav -- */
 
 @media only screen and (max-width: 767px) {
     .sidebar-only {
         display: block;
     }
-
     #nav {
         padding: 0px 0px;
     }
@@ -428,15 +489,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         -webkit-transition: 0.2s all;
         transition: 0.2s all;
     }
-
-    .main-nav li a:hover, .main-nav li a:focus {
+    .main-nav li a:hover,
+    .main-nav li a:focus {
         background-color: #eeb407;
         color: #FFF;
         opacity: 1;
     }
-
-    
-    
 }
 
 
@@ -464,12 +522,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     width: 25px;
 }
 
-.nav-collapse span:before, .nav-collapse span:after {
+.nav-collapse span:before,
+.nav-collapse span:after {
     content: "";
     display: block;
 }
 
-.nav-collapse span, .nav-collapse span:before, .nav-collapse span:after {
+.nav-collapse span,
+.nav-collapse span:before,
+.nav-collapse span:after {
     height: 4px;
     background: #fff;
     -webkit-transition: 0.2s all;
@@ -504,16 +565,13 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transform: translateY(-4px) rotate(135deg);
 }
 
+
 /*------------------------------------*\
 	Header
 \*------------------------------------*/
 
 header {
     position: relative;
-}
-
-#home {
-    height: 100vh;
 }
 
 #home .home-wrapper {
@@ -528,10 +586,11 @@ header {
 }
 
 .home-content h1 {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 .home-content button {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .header-wrapper h2 {
@@ -559,32 +618,67 @@ header {
 	Download Butons
 \*------------------------------------*/
 
-.btn-store {
-    /* color: #fff; */
-    min-width: 254px;
+.home-store-btns li {
+    width: fit-content;
+    display: inline-block;
+}
+
+.store-btn {
     margin: 10px;
-    ;
-    padding: 12px 30px ;
-    border-color: #eeb407 !important;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
-.btn-store:focus,
-.btn-store:hover {
-    color: #ffffff !important;
-    background-color: #eeb407;
-    border-color: #fff !important;
+.store-btn:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-.btn-store .btn-label,
-.btn-store .btn-caption {
-    display: block;
-    line-height: 2;
-     text-align: right;
+
+/*------------------------------------*\
+	How to use
+\*------------------------------------*/
+.phone {
+    opacity: 1;
+    transition: opacity 120ms linear 0s;
 }
 
-.btn-store .btn-caption {
-    font-size: 24px;
+
 }
+@media only screen and (min-width: 992px) {
+    .toggle-phones-btns {
+        display: none;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+
+
+.toggle-phones-btns li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.toggle-phones-btns li button {
+    border: 1px solid #17a2b8;
+    border-radius: 24px;
+    background: none;
+    color: #17a2b8;
+    height: 50px;
+    width: 100px;
+}
+
+.toggle-phones-btns li button:hover, .toggle-phones-btns li .active {
+    background: #17a2b8;
+    color: #ffF;
+}
+
+
 
 
 /*------------------------------------*\
@@ -617,22 +711,23 @@ header {
 
 .footer-follow li a {
     font-size: 25px;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 3px;
-  background-color: #eeb407;
-  color:#FFF;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #eeb407;
+    color: #FFF;
 }
 
 .footer-copyright p {
     text-align: center;
     font-size: 14px;
     margin: 0;
+    margin-top: 15px;
+    margin-bottom: -40px;
 }
-
 
 
 /*------------------------------------*\
@@ -664,17 +759,19 @@ header {
     margin-right: 5px;
 }
 
+
 /*------------------------------------*\
 	Blog post
 \*------------------------------------*/
 
 #main .blog .blog-content {
-  padding: 20px 0px 0px;
+    padding: 20px 0px 0px;
 }
 
 #main .blog {
-  margin-top: 0px;
+    margin-top: 0px;
 }
+
 
 /* -- blog tags -- */
 
@@ -697,8 +794,8 @@ header {
 }
 
 .blog-tags a:hover {
-  color: #FFF;
-  background-color: #eeb407;
+    color: #FFF;
+    background-color: #eeb407;
 }
 
 .blog-tags a i {
@@ -707,7 +804,7 @@ header {
 }
 
 .blog-tags a:hover i {
-  color: #fff;
+    color: #fff;
 }
 
 
@@ -739,7 +836,7 @@ header {
 }
 
 .blog-author .media .media-heading .author-social {
-  float: right;
+    float: right;
 }
 
 .blog-author .author-social a {
@@ -754,13 +851,14 @@ header {
     background-color: #6195FF;
 }
 
+
 /* -- blog comments -- */
 
 .blog-comments {
     margin: 40px 0px;
 }
 
- .media {
+.media {
     padding: 20px;
     background-color: #FFF;
     border-top: 1px solid #EEE;
@@ -770,30 +868,31 @@ header {
     margin-top: 0px;
 }
 
- .media:first-child {
+.media:first-child {
     border-bottom: 0px;
 }
 
- .media:last-child {
+.media:last-child {
     border-bottom: 1px solid #EEE;
 }
 
 .media .media-left {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .media .media-body .media-heading {
     text-transform: uppercase;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
- .media .media-body .media-heading .time {
+.media .media-body .media-heading .time {
     font-size: 12px;
     margin-right: 20px;
     font-weight: 400;
     color: #868F9B;
 }
- .media .media-body .media-heading .reply {
+
+.media .media-body .media-heading .reply {
     float: left;
     margin: 0;
     font-size: 12px;
@@ -801,18 +900,20 @@ header {
     font-weight: 400;
 }
 
- .media.author {
+.media.author {
     /* background-color: #F4F4F4; */
     border-color: #eeb407;
     border-bottom: 1px solid #eeb407;
 }
- .media.author>.media-body>.media-heading {
+
+.media.author>.media-body>.media-heading {
     color: #eeb407;
 }
 
- .media.author + .media {
+.media.author+.media {
     border-top: 0px;
 }
+
 
 /* blog reply form */
 
@@ -820,11 +921,14 @@ header {
     margin: 40px 0px;
 }
 
-.reply-form form .input, .reply-form form .input , .reply-form form textarea {
-	margin-bottom:20px;
+.reply-form form .input,
+.reply-form form .input,
+.reply-form form textarea {
+    margin-bottom: 20px;
 }
 
-.reply-form form .input, .reply-form form .input {
+.reply-form form .input,
+.reply-form form .input {
     width: calc(50% - 10px);
     display: inline-block;
 }
@@ -843,23 +947,24 @@ header {
 }
 
 .widget h3 {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 
 /* -- search sidebar -- */
 
- .widget-search {
+.widget-search {
     position: relative;
 }
 
- .widget-search .search-input {
+.widget-search .search-input {
     padding-right: 50px;
 }
 
- .widget-search .search-btn {
+.widget-search .search-btn {
     position: absolute;
     right: 0px;
-	  bottom: 0px;
+    bottom: 0px;
     width: 40px;
     height: 40px;
     border: none;
@@ -867,6 +972,7 @@ header {
     background-color: transparent;
     color: #eeb407;
 }
+
 
 /* -- category sidebar -- */
 
@@ -879,7 +985,7 @@ header {
 }
 
 .widget-category a:nth-child(1) {
-  border-top: 1px solid #EEE;
+    border-top: 1px solid #EEE;
 }
 
 .widget-category a span {
@@ -891,21 +997,23 @@ header {
     color: #eeb407;
 }
 
+
 /* -- tags sidebar -- */
 
 .widget-tags a {
-  display: inline-block;
-  padding: 6px 13px;
-  font-size: 14px;
-  margin: 2px 0px;
-  background: #F4F4F4;
-  color: #10161A;
+    display: inline-block;
+    padding: 6px 13px;
+    font-size: 14px;
+    margin: 2px 0px;
+    background: #F4F4F4;
+    color: #10161A;
 }
 
 .widget-tags a:hover {
-  color: #FFF;
-  background-color: #eeb407;
+    color: #FFF;
+    background-color: #eeb407;
 }
+
 
 /* -- posts sidebar -- */
 
@@ -957,6 +1065,7 @@ header {
     font-size: 12px;
 }
 
+
 /*------------------------------------*\
 	Contact
 \*------------------------------------*/
@@ -981,8 +1090,8 @@ header {
     margin-bottom: 20px;
 }
 
-
-.contact-form .input:nth-child(1), .contact-form .input:nth-child(2) {
+.contact-form .input:nth-child(1),
+.contact-form .input:nth-child(2) {
     width: calc(50% - 10px);
 }
 
@@ -996,7 +1105,7 @@ header {
 \*------------------------------------*/
 
 #back-to-top {
-    display:none;
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -1005,21 +1114,21 @@ header {
     line-height: 50px;
     text-align: center;
     background: #eeb407;
-    border-radius:3px;
+    border-radius: 3px;
     color: #FFF;
     z-index: 9999;
-  -webkit-transition: 0.2s opacity;
-  transition: 0.2s opacity;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
     cursor: pointer;
 }
 
 #back-to-top:after {
-  content: "\f106";
-  font-family: 'FontAwesome';
+    content: "\f106";
+    font-family: 'FontAwesome';
 }
 
 #back-to-top:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .panel-title a {
@@ -1027,7 +1136,8 @@ header {
     padding: 10px 0 !important;
 }
 
-.panel-title a:hover, .panel-title a:focus {
+.panel-title a:hover,
+.panel-title a:focus {
     color: #eeb407;
 }
 
