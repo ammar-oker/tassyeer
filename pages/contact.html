@@ -17,39 +17,43 @@
 
 <body>
 
-    <nav id="nav" class="navbar nav-transparent bg-mix" style="padding-top: 10px; padding-bottom: 10px;">
+    <nav id="nav" class="navbar nav-transparent bg-mix">
         <div class="container">
-            <!-- <div class="navbar-header"> -->
-            <div class="nav-collapse">
-                <span></span>
-            </div>
-            <div class="navbar-brand navbar-left">
-                <a href="../index.html">
-                    <img class="logo" src="../img/logo-alt.png" alt="logo">
-                    <img class="logo-alt" src="../img/logo-alt.png" alt="logo">
-                </a>
-            </div>
-            <!-- </div> -->
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="nav-collapse">
+                        <span></span>
+                    </div>
 
-            <ul class="main-nav nav navbar-nav navbar-right">
-                <li><a href="../index.html">الرئيسية</a></li>
-                <li><a href="./FAQ.html">الأسئلة الشائعة</a></li>
-                <li><a href="./blog.html">المدونة</a></li>
-                <li><a href="#">حول التطبيق</a></li>
-                <li class="active"><a href="#">اتصل بنا</a></li>
-                <li>
                     <div class="navbar-brand">
-                        <a href="#" class=" btn bg-yellow" style="padding-top: 10px; color: #fff; width: 80px; height: 40px; margin-top: 7px;">
-                            تحميل
+                        <a href="../index.html">
+                            <img class="logo" src="../img/logo-02.png" alt="logo">
+                            <img class="logo-alt" src="../img/logo-02.png" alt="logo">
                         </a>
                     </div>
-                </li>
-            </ul>
-
+                </div>
+                <div class="col-sm-8">
+                    <ul class="main-nav nav navbar-nav">
+                        <div class="sm-padding text-center sidebar-only">
+                            <img class="img-responsive" class="logo-alt" src="../img/logo (1).png" alt="logo">
+                        </div>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="./FAQ.html">الأسئلة الشائعة</a></li>
+                        <li><a href="./blog.html">المدونة</a></li>
+                        <li><a href="#">حول التطبيق</a></li>
+                        <li><a href="./contact.html">اتصل بنا</a></li>
+                        <li class="nav-btn">
+                            <a href="#" class="btn bg-yellow">
+                                        تحميل
+                                    </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <div id="contact" style="padding-top: 60px;" class="section">
+    <div id="contact" class="section md-padding">
 
         <div class="container">
 
@@ -59,7 +63,6 @@
                     <h2 class="title">اتصل بنا</h2>
                 </div>
 
-
                 <div class="col-sm-4">
                     <div class="contact">
                         <i class="fa fa-phone"></i>
@@ -67,7 +70,6 @@
                         <p>531 000 00 00</p>
                     </div>
                 </div>
-
 
                 <div class="col-sm-4">
                     <div class="contact">
@@ -77,7 +79,6 @@
                     </div>
                 </div>
 
-
                 <div class="col-sm-4">
                     <div class="contact">
                         <i class="fa fa-map-marker"></i>
@@ -85,7 +86,6 @@
                         <p>Fatih, Istanbul</p>
                     </div>
                 </div>
-
 
                 <div class="col-md-8 col-md-offset-2">
                     <form class="contact-form">
@@ -96,177 +96,9 @@
                         <button class="main-btn">أرسال رسالة</button>
                     </form>
                 </div>
-
-
-
             </div>
-
         </div>
-
     </div>
-
-    <div id="map" style="width: 100%; height: 500px; border: 0; margin: 0; margin-top: 40px;"></div>
-    <script>
-        var map;
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: 41.011,
-                    lng: 28.94
-                },
-                zoom: 15,
-                style: [{
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#ebe3cd"
-                    }]
-                }, {
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#523735"
-                    }]
-                }, {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                        "color": "#f5f1e6"
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "color": "#c9b2a6"
-                    }]
-                }, {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "color": "#dcd2be"
-                    }]
-                }, {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#ae9e90"
-                    }]
-                }, {
-                    "featureType": "landscape.natural",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#dfd2ae"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#dfd2ae"
-                    }]
-                }, {
-                    "featureType": "poi",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#93817c"
-                    }]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                        "color": "#a5b076"
-                    }]
-                }, {
-                    "featureType": "poi.park",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#447530"
-                    }]
-                }, {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#f5f1e6"
-                    }]
-                }, {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#fdfcf8"
-                    }]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#f8c967"
-                    }]
-                }, {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "color": "#e9bc62"
-                    }]
-                }, {
-                    "featureType": "road.highway.controlled_access",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#e98d58"
-                    }]
-                }, {
-                    "featureType": "road.highway.controlled_access",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "color": "#db8555"
-                    }]
-                }, {
-                    "featureType": "road.local",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#806b63"
-                    }]
-                }, {
-                    "featureType": "transit.line",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#dfd2ae"
-                    }]
-                }, {
-                    "featureType": "transit.line",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#8f7d77"
-                    }]
-                }, {
-                    "featureType": "transit.line",
-                    "elementType": "labels.text.stroke",
-                    "stylers": [{
-                        "color": "#ebe3cd"
-                    }]
-                }, {
-                    "featureType": "transit.station",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#dfd2ae"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "geometry.fill",
-                    "stylers": [{
-                        "color": "#b9d3c2"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{
-                        "color": "#92998d"
-                    }]
-                }]
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBddN9EJ2x7SaG-zemLE1srQzwY3DyAtxQ&callback=initMap" async defer></script>
-    <!-- <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.569457565496!2d28.93710001486705!3d41.01279582709668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba304454a40d%3A0x9d1c2e25da763176!2zTW9sbGEgR8O8cmFuaSwgT8SfdXpoYW4gQ2QuLCAzNDA5MyBGYXRpaC_EsHN0YW5idWw!5e0!3m2!1sen!2str!4v1574951728914!5m2!1sen!2str"
-        width="100%" height="500" frameborder="0" style="border:0; margin: 0; margin-top: 40px; margin-bottom: -10px;"
-        allowfullscreen="">
-    </iframe> -->
 
     <footer id="footer" class="sm-padding bg-dark">
 
@@ -275,7 +107,27 @@
             <div class="row">
 
                 <div class="col-md-3 col-sm-6 col-12">
-                    <h4 class="white" style="padding: 20px 0;">حمل التطبيق الآن</h4>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="footer-logo">
+                                    <a href="../index.html"><img src="../img/logo (1).png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <ul class="footer-follow py-5">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h4 class="white my-5">حمل التطبيق الآن</h4>
                     <ul>
                         <li>
                             <a id="ios_badge" href="#" target="_blank">
@@ -289,31 +141,9 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="col-md-3 col-sm-6 col-12">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="../img/logo-alt.png" alt="logo"></a>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <ul class="footer-follow" style="padding-top: 20px;">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div class="col-md-3 col-sm-6 col-12">
-                    <h5 class="white" style="padding: 20px 0;">روابط مهمة</h5>
+                    <h5 class="white my-5">روابط مهمة</h5>
                     <ul class="footer-links">
                         <li><a class="yellow" href="#">رابط 1</a></li>
                         <li><a class="yellow" href="#">رابط 2</a></li>
@@ -322,8 +152,9 @@
                         <li><a class="yellow" href="#">رابط 5</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 col-12">
-                    <h5 class="white" style="padding: 20px 0;">روابط مهمة</h5>
+
+                <div class="col-md-3 col-sm-6 col-12 my-5">
+                    <h5 class="white ">روابط مهمة</h5>
                     <ul class="footer-links">
                         <li><a class="yellow" href="#">رابط 1</a></li>
                         <li><a class="yellow" href="#">رابط 2</a></li>
@@ -335,18 +166,19 @@
             </div>
 
         </div>
+
         <div class="footer-copyright">
             <p> حقوق النشر 2019. جميع الحقوق محفوظة. تم تصميم هذا الموقع بواسطة
                 <a href="#" target="_blank">
-                    Lippo Grup
-                </a>
+                            Lippo Grup
+                        </a>
             </p>
         </div>
-    </footer>
 
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js?ver=3.3.7'></script>
-    <script src="../js/jqueryCode.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 

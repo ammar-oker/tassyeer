@@ -1,71 +1,108 @@
-//Glide posts carousel
-var postGlide = new Glide('.post-glide', {
-  autoplay: "3000",
-  hoverpause: false,
-  type: "carousel",
-  direction: "rtl",
-  perView: 3,
-  gap: '40',
-  breakpoints: {
-    1230: {
-      perView: 3
+(function($) {
+  "use strict";
+
+  // Smooth scroll
+  $("#nav .main-nav a[href^='#']").on("click", function(e) {
+    e.preventDefault();
+    var hash = this.hash;
+    $("html, body").animate(
+      {
+        scrollTop: $(this.hash).offset().top
+      },
+      600
+    );
+  });
+
+  $("#back-to-top").on("click", function() {
+    $("body,html").animate(
+      {
+        scrollTop: 0
+      },
+      600
+    );
+  });
+
+  ///////////////////////////
+  // Btn nav collapse
+  $("#nav .nav-collapse").on("click", function() {
+    $("#nav").toggleClass("open");
+  });
+
+  ///////////////////////////
+  // On Scroll
+  $(window).on("scroll", function() {
+    var wScroll = $(this).scrollTop();
+
+    // Fixed nav
+    wScroll > 1
+      ? $("#nav").addClass("fixed-nav")
+      : $("#nav").removeClass("fixed-nav");
+
+    // Back To Top Appear
+    wScroll > 700 ? $("#back-to-top").fadeIn() : $("#back-to-top").fadeOut();
+  });
+
+  ///////////////////////////
+
+  $(document).ready(function() {
+    //"how to use" carousel for mobiles only
+    var phonesSwiper = new Swiper(".phones-swiper", {
+      slidesPerView: 1,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function(index, className) {
+          return (
+            '<button class="' + className + '">' + (index + 1) + "</button>"
+          );
+        }
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        }
+      }
+    });
+  });
+
+  var postsSwiper = new Swiper(".posts-swiper", {
+    loop: true,
+    slidesPerView: 1,
+    grabCursor: true,
+    spaceBetween: 20,
+    slidesOffsetBefore: 10,
+    slidesOffsetAfter: 20,
+	width: 280,
+	autoplay: {
+		delay: 7000,
+	  },
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable: true
     },
-    1024: {
-      perView: 2
-    },
-    600: {
-      perView: 1
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        width: 640
+      },
+      1024: {
+        slidesPerView: 3,
+        width: 1024,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0
+      }
     }
-  }
-});
-postGlide.mount();
+  });
 
-//Glide posts carousel
-var glide = new Glide('.glide', {
-  autoplay: "3000",
-  hoverpause: false,
-  type: "carousel",
-  direction: "rtl",
-  perView: 1,
-  gap: '0'
-});
-glide.mount();
 
-document.querySelector('#phoneBtn1').addEventListener('click', function() {
-  document.querySelector('#phoneBtn1').classList.add("active");
-  document.querySelector('#phoneBtn2').classList.remove("active");
-  document.querySelector('#phoneBtn3').classList.remove("active");
-  document.querySelector('#phone1').classList.remove("hide");
-  document.querySelector('#phone2').classList.add("hide");
-  document.querySelector('#phone3').classList.add("hide");
-})
-document.querySelector('#phoneBtn2').addEventListener('click', function() {
-  document.querySelector('#phoneBtn2').classList.add("active");
-  document.querySelector('#phoneBtn1').classList.remove("active");
-  document.querySelector('#phoneBtn3').classList.remove("active");
-  document.querySelector('#phone2').classList.remove("hide");
-  document.querySelector('#phone1').classList.add("hide");
-  document.querySelector('#phone3').classList.add("hide");
+  var iphoneXSwiper = new Swiper ('.iphone-x-swiper', {
+    // Optional parameters
+	loop: true,
+	autoplay: {
+		delay: 3000,
+	  }
+  })
 
-})
-document.querySelector('#phoneBtn3').addEventListener('click', function() {
-  document.querySelector('#phoneBtn3').classList.add("active");
-  document.querySelector('#phoneBtn1').classList.remove("active");
-  document.querySelector('#phoneBtn2').classList.remove("active");
-  document.querySelector('#phone3').classList.remove("hide");
-  document.querySelector('#phone1').classList.add("hide");
-  document.querySelector('#phone2').classList.add("hide");
-})
 
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    document.querySelector('#phone3').classList.add("hide");
-    document.querySelector('#phone2').classList.add("hide");
-    document.querySelector('.toggle-phones-btns').classList.remove('hide')
-
-  }
-}
-
-var x = window.matchMedia("(max-width: 991px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+})(jQuery);
