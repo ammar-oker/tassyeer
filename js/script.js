@@ -34,7 +34,7 @@
     $('#mySidenav').removeClass('show-menu');
   });
   $('#mySidenav').click(function (e) {
-    if(e.target.id != 'menu-btn' && e.target.id != 'close-sidebar') {
+    if(e.target.id != 'menu-btn' && e.target.id != 'close-sidebar' && e.target.id != 'login-btn') {
       e.stopPropagation();
     }
   });

@@ -47,26 +47,22 @@
       >
         <i class="fa fa-arrow-right hvr-icon"></i>
       </button>
-      <div class="sm-padding text-center">
-        <img
-          class="img-responsive user-photo"
-          src="./img/perso2.jpg"
-          alt="logo"
-        />
-        <h4 class="yellow my-5">
-          <span>اسم المستخدم</span
-          ><span class="" style="margin-right: 40px;">
+      <div class=" text-center">
+        <div class="user-group yellow my-5">
+          <span class="user-btn" style="margin-right: 40px;">
             <div class=" btn-group">
-              <button
+              <img
                 id="menu-btn"
                 type="button"
-                class="btn btn-default dropdown-toggle fa fa-cog"
+                class="  "
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-              >
-                <span class="caret"></span>
-              </button>
+                class="img-responsive user-photo dropdown-toggle"
+                src="http://via.placeholder.com/50"
+                alt="logo"
+              />
+              <span class="caret"></span>
               <ul class="dropdown-menu">
                 <li><a href="#">معلومات الحساب</a></li>
                 <li><a href="#">خدماتي</a></li>
@@ -76,28 +72,43 @@
               </ul>
             </div>
           </span>
-        </h4>
+          <h5 class="user-name">اسم المستخدم</h5>
+        </div>
       </div>
-        <ul class="sidenav-links main-nav nav navbar-nav navbar-right ml-auto">
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="./pages/FAQ.html">الأسئلة الشائعة</a></li>
-          <li><a href="./pages/blog.html">المدونة</a></li>
-          <li><a href="#">حول التطبيق</a></li>
-          <li><a href="./pages/contact.html">اتصل بنا</a></li>
-          <li class="nav-btn">
-            <a href="#" class="btn bg-yellow">
-              تحميل
-            </a>
-          </li>
-        </ul>
+      <div  class="text-right">
+        <a
+        id="login-btn"
+          href="#"
+          class="login-btn"
+          data-toggle="modal"
+          data-target="#login-modal"
+          >تسجيل الدخول</a
 
-        <ul class="main-links">
-          <li><a href="#">رابط #1</a></li>
-          <li><a href="#">رابط #2</a></li>
-          <li><a href="#">رابط #3</a></li>
-          <li><a href="#">رابط #4</a></li>
-          <li><a href="#">رابط #5</a></li>
-        </ul>
+        >
+      </div>
+      <form action="#" class="search-bar my-5">
+        <input class="white-text" type="text" name="" id="" placeholder="بحث">
+      </form>
+      <ul class="sidenav-links main-nav nav navbar-nav navbar-right ml-auto">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="./pages/FAQ.html">الأسئلة الشائعة</a></li>
+        <li><a href="./pages/blog.html">المدونة</a></li>
+        <li><a href="#">حول التطبيق</a></li>
+        <li><a href="./pages/contact.html">اتصل بنا</a></li>
+        <li class="nav-btn">
+          <a href="#" class="btn bg-yellow">
+            تحميل
+          </a>
+        </li>
+      </ul>
+
+      <ul class="main-links">
+        <li><a href="#">رابط #1</a></li>
+        <li><a href="#">رابط #2</a></li>
+        <li><a href="#">رابط #3</a></li>
+        <li><a href="#">رابط #4</a></li>
+        <li><a href="#">رابط #5</a></li>
+      </ul>
     </div>
 
     <nav id="nav" class="navbar nav-transparent">
@@ -112,7 +123,7 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-7 col-md-10">
+          <div class="col-lg-6 col-md-10">
             <ul class="nav-links main-nav nav navbar-nav">
               <li><a href="#home">الرئيسية</a></li>
               <li><a href="./pages/services.html">خدامتنا</a></li>
@@ -126,8 +137,8 @@
               </li>
             </ul>
           </div>
-          <div class="col-lg-2 visible-lg navbar-left user">
-            <div class="text-left">
+          <div class="col-lg-3 visible-lg navbar-left user">
+                <div class="text-left">
               <a
                 href="#"
                 class="login-btn"
@@ -136,7 +147,7 @@
                 >تسجيل الدخول</a
               >
             </div>
-          </div>
+            
         </div>
       </div>
     </nav>
@@ -237,12 +248,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center">
-            <img
-              src="./img/logo-colored.png"
-              style="transform: scale(.6); margin-top: -80px;"
-              class=" "
-              alt="logo"
-            />
+            <img src="./img/logo-270.png" class="my-5" alt="logo" />
           </div>
           <div class="col-md-6">
             <div class="embed-responsive embed-responsive-16by9">
@@ -259,25 +265,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section id="video" class="section md-padding">
-        <div class="section-header text-center">
-            <h2 class="title">قسم الفيديو</h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 ">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2zBwNqARNN8"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="services" class="section sm-padding">
       <div class="container">
@@ -595,7 +582,7 @@
                 </a>
               </li>
               <li>
-                <a  id="android_badge" href="#" target="_blank">
+                <a id="android_badge" href="#" target="_blank">
                   <img
                     class="store-btn"
                     src="./img/google-play.svg"
